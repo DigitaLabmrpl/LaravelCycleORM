@@ -48,7 +48,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "DigitalLab\\Cycle\\Providers\\DigitalLabCycleServiceProvider"
+                "DigitalLab\\Cycle\\Providers\\CycleServiceProvider"
             ]
         }
     },
