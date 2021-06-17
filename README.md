@@ -12,7 +12,7 @@ declarations, and proxies via extensions.
 Full information - https://cycle-orm.dev/docs
 
 ### Requirements
-- Laravel 7.x
+- Laravel 8.x
 - PHP 7.4 and above
 
 ## Installation and Configuration
