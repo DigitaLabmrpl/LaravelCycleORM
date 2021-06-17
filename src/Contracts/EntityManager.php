@@ -1,6 +1,6 @@
 <?php
 
-namespace Butschster\Cycle\Contracts;
+namespace DigitalLab\Cycle\Contracts;
 
 use Illuminate\Support\Collection;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Butschster\Tests;
+namespace DigitalLab\Tests;
 
-use Butschster\Cycle\Paginator;
+use DigitalLab\Cycle\Paginator;
 use Illuminate\Support\Collection;
 
 class PaginatorTest extends TestCase

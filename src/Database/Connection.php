@@ -1,6 +1,6 @@
 <?php
 
-namespace Butschster\Cycle\Database;
+namespace DigitalLab\Cycle\Database;
 
 use Closure;
 use Cycle\ORM\ORMInterface;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Butschster\Cycle\Migrations;
+namespace DigitalLab\Cycle\Migrations;
 
 use Spiral\Core\Container;
 use Spiral\Core\FactoryInterface;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Butschster\Cycle\Commands;
+namespace DigitalLab\Cycle\Commands;
 
 use Illuminate\Console\Command;
 use Spiral\Migrations\Migrator;

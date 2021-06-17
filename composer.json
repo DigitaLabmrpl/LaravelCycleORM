@@ -1,5 +1,5 @@
 {
-    "name": "butschster/cycle-orm",
+    "name": "DigitalLab/cycle-orm",
     "description": "Cycle ORM integration for the Laravel Framework",
     "keywords": [
         "laravel",
@@ -11,12 +11,12 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Pavel Buchnev",
-            "email": "butschster@gmail.com"
+            "name": "DigitalLab",
+            "email": "dev@digitallab.com.ua"
         }
     ],
     "require": {
-        "php": "^7.4",
+        "php" : "^7.4|^8.0",
         "illuminate/config": "^7.0|^8.0",
         "illuminate/database": "^7.0|^8.0",
         "illuminate/support": "^7.0|^8.0",
@@ -24,6 +24,7 @@
         "illuminate/console": "^7.0|^8.0",
         "illuminate/pagination": "^7.0|^8.0",
         "cycle/annotated": "^2.0",
+        "cycle/bootstrap": "^0.5.0",
         "cycle/migrations": "^1.0",
         "cycle/orm": "^1.2",
         "cycle/proxy-factory": "^1.2.1",
@@ -36,18 +37,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Butschster\\Cycle\\": "src/"
+            "DigitalLab\\Cycle\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Butschster\\Tests\\": "tests/"
+            "DigitalLab\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Butschster\\Cycle\\Providers\\LaravelServiceProvider"
+                "CycleServiceProvider"
             ]
         }
     },

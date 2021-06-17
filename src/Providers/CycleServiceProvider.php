@@ -1,10 +1,10 @@
 <?php
 
-namespace Butschster\Cycle\Providers;
+namespace DigitalLab\Cycle\Providers;
 
-use Butschster\Cycle\Commands;
-use Butschster\Cycle\Contracts\EntityManager as EntityManagerContract;
-use Butschster\Cycle\Entity\Manager as EntityManager;
+use DigitalLab\Cycle\Commands;
+use DigitalLab\Cycle\Contracts\EntityManager as EntityManagerContract;
+use DigitalLab\Cycle\Entity\Manager as EntityManager;
 use Cycle\ORM\Factory;
 use Cycle\ORM\FactoryInterface;
 use Cycle\ORM\ORMInterface;
@@ -17,12 +17,12 @@ use Faker\Factory as FakerFactory;
 use Faker\Generator as FakerGenerator;
 use Illuminate\Database\Connection;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
-use Butschster\Cycle\Contracts\SchemaManager as SchemaManagerContract;
-use Butschster\Cycle\SchemaManager;
-use Butschster\Cycle\Auth\UserProvider;
-use Butschster\Cycle\Database\Connection as DatabaseConnection;
-use Butschster\Cycle\Entity\Relations\MaterializerManager;
-use Butschster\Cycle\Migrations\FileRepository;
+use DigitalLab\Cycle\Contracts\SchemaManager as SchemaManagerContract;
+use DigitalLab\Cycle\SchemaManager;
+use DigitalLab\Cycle\Auth\UserProvider;
+use DigitalLab\Cycle\Database\Connection as DatabaseConnection;
+use DigitalLab\Cycle\Entity\Relations\MaterializerManager;
+use DigitalLab\Cycle\Migrations\FileRepository;
 use Spiral\Core\FactoryInterface as SpiralContainerInterface;
 use Spiral\Database\Config\DatabaseConfig;
 use Spiral\Database\DatabaseManager;
@@ -33,7 +33,7 @@ use Spiral\Tokenizer\ClassLocator;
 use Spiral\Tokenizer\Config\TokenizerConfig;
 use Spiral\Tokenizer\Tokenizer;
 
-class LaravelServiceProvider extends BaseServiceProvider
+class CycleServiceProvider extends BaseServiceProvider
 {
     /**
      * The array of resolved Faker instances.
@@ -227,8 +227,8 @@ class LaravelServiceProvider extends BaseServiceProvider
             return static::$fakers[$locale];
         });
 
-        $this->app->singleton(\Butschster\Cycle\Database\Factory::class, function ($app) {
-            $factory = new\Butschster\Cycle\Database\Factory(
+        $this->app->singleton(\DigitalLab\Cycle\Database\Factory::class, function ($app) {
+            $factory = new\DigitalLab\Cycle\Database\Factory(
                 $app[ORMInterface::class],
                 $app->make(FakerGenerator::class)
             );

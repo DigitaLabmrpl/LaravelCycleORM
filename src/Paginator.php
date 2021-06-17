@@ -1,6 +1,6 @@
 <?php
 
-namespace Butschster\Cycle;
+namespace DigitalLab\Cycle;
 
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Pagination\AbstractPaginator;

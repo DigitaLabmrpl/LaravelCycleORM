@@ -1,8 +1,8 @@
 <?php
 
-namespace Butschster\Cycle\Facades;
+namespace DigitalLab\Cycle\Facades;
 
-use Butschster\Cycle\Contracts\EntityManager as EntityManagerContract;
+use DigitalLab\Cycle\Contracts\EntityManager as EntityManagerContract;
 use Illuminate\Support\Facades\Facade;
 
 class EntityManager extends Facade

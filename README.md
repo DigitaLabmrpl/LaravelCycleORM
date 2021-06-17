@@ -2,7 +2,7 @@
 
 ![laracycle](https://user-images.githubusercontent.com/773481/86586434-8c675700-bf90-11ea-836c-59b7485f6a8f.png)
 
-[![Latest Stable Version](https://poser.pugx.org/butschster/cycle-orm/v/stable)](https://packagist.org/packages/butschster/cycle-orm) [![Total Downloads](https://poser.pugx.org/butschster/cycle-orm/downloads)](https://packagist.org/packages/butschster/cycle-orm) [![License](https://poser.pugx.org/butschster/cycle-orm/license)](https://packagist.org/packages/butschster/cycle-orm)
+[![Latest Stable Version](https://poser.pugx.org/DigitalLab/cycle-orm/v/stable)](https://packagist.org/packages/DigitalLab/cycle-orm) [![Total Downloads](https://poser.pugx.org/DigitalLab/cycle-orm/downloads)](https://packagist.org/packages/DigitalLab/cycle-orm) [![License](https://poser.pugx.org/DigitalLab/cycle-orm/license)](https://packagist.org/packages/DigitalLab/cycle-orm)
 
 Cycle is a PHP DataMapper ORM and Data Modelling engine designed to safely work in classic and daemonized PHP 
 applications (like RoadRunner). The ORM provides flexible configuration options to model datasets, a powerful query
@@ -19,15 +19,15 @@ Full information - https://cycle-orm.dev/docs
 
 From the command line run
 ```shell script
-composer require butschster/cycle-orm
+composer require DigitalLab/cycle-orm
 ```
 
 Optionally you can register the EntityManager, Transaction and/or ORM facade:
 ```php
-'DatabaseManager' => Butschster\Cycle\Facades\DatabaseManager::class,
-'Transaction' => Butschster\Cycle\Facades\Transaction::class,
-'ORM' => Butschster\Cycle\Facades\ORM::class,
-'EntityManager' => Butschster\Cycle\Facades\EntityManager::class,
+'DatabaseManager' => DigitalLab\Cycle\Facades\DatabaseManager::class,
+'Transaction' => DigitalLab\Cycle\Facades\Transaction::class,
+'ORM' => DigitalLab\Cycle\Facades\ORM::class,
+'EntityManager' => DigitalLab\Cycle\Facades\EntityManager::class,
 ```
 
 ### Env variables
@@ -51,7 +51,7 @@ DB_SCHEMA_CACHE_DRIVER=file # DB schema cache driver
 
 Publish the config file.
 ```shell script
-php artisan vendor:publish --provider="Butschster\Cycle\Providers\LaravelServiceProvider" --tag=config
+php artisan vendor:publish --provider="DigitalLab\Cycle\Providers\LaravelServiceProvider" --tag=config
 ```
 
 #### Configure Databases
@@ -99,11 +99,11 @@ EntityManager::persist($entity);
 
 // Or
 
-app(\Butschster\Cycle\Contracts\EntityManager::class)->persist($entity);
+app(\DigitalLab\Cycle\Contracts\EntityManager::class)->persist($entity);
 
 // Or
 
-use Butschster\Cycle\Contracts\EntityManager;
+use DigitalLab\Cycle\Contracts\EntityManager;
 
 class ExampleController extends Controller
 {
@@ -241,7 +241,7 @@ class User implements Authenticatable
 ```php
 namespace App;
 
-use Butschster\Cycle\Repository;
+use DigitalLab\Cycle\Repository;
 
 class UserRepository extends Repository
 {
@@ -256,8 +256,8 @@ class UserRepository extends Repository
 #### Create user
 ```php
 use Cycle\ORM\ORMInterface;
-use Butschster\Cycle\Facades\ORM;
-use Butschster\Cycle\Facades\EntityManager;
+use DigitalLab\Cycle\Facades\ORM;
+use DigitalLab\Cycle\Facades\EntityManager;
 
 $user = new User();
 
@@ -276,8 +276,8 @@ EntityManager::persist($user);
 
 #### Update user
 ```php
-use Butschster\Cycle\Facades\ORM;
-use Butschster\Cycle\Facades\EntityManager;
+use DigitalLab\Cycle\Facades\ORM;
+use DigitalLab\Cycle\Facades\EntityManager;
 
 $repository = ORM::getRepository(User::class);
 $user = $repository->findByPK('5c9e177b0a975a6eeccf5960');
@@ -292,8 +292,8 @@ EntityManager::persist($user);
 
 #### Delete user
 ```php
-use Butschster\Cycle\Facades\ORM;
-use Butschster\Cycle\Facades\EntityManager;
+use DigitalLab\Cycle\Facades\ORM;
+use DigitalLab\Cycle\Facades\EntityManager;
 
 $repository = ORM::getRepository(User::class);
 $user = $repository->findByPK('5c9e177b0a975a6eeccf5960');

@@ -1,9 +1,9 @@
 <?php
 
-namespace Butschster\Cycle\Commands;
+namespace DigitalLab\Cycle\Commands;
 
 use Illuminate\Console\Command;
-use Butschster\Cycle\Contracts\SchemaManager;
+use DigitalLab\Cycle\Contracts\SchemaManager;
 
 class RefreshSchema extends Command
 {

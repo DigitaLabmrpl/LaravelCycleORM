@@ -1,8 +1,8 @@
 <?php
 
-namespace Butschster\Cycle\Entity;
+namespace DigitalLab\Cycle\Entity;
 
-use Butschster\Cycle\Contracts\EntityManager;
+use DigitalLab\Cycle\Contracts\EntityManager;
 use Cycle\ORM\ORMInterface;
 use Illuminate\Support\Collection;
 

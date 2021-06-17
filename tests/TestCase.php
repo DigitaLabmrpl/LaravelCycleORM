@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Butschster\Tests;
+namespace DigitalLab\Tests;
 
 use Cycle\ORM\ORMInterface;
 use Cycle\ORM\TransactionInterface;
